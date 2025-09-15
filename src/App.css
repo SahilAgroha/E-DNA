@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+
+/* Enhanced glassmorphism effects */
+.sidebar-glass {
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Active item glow effect */
+.active-glow {
+  position: relative;
+}
+
+.active-glow::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  background: linear-gradient(45deg, #ec4899, #f97316, #ec4899);
+  border-radius: 20px;
+  filter: blur(8px);
+  opacity: 0.5;
+  z-index: -1;
+  animation: glow-pulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow-pulse {
+  0% { opacity: 0.5; }
+  100% { opacity: 0.8; }
+}
+
+/* Hover animations */
+.menu-item-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-item-hover:hover {
+  transform: translateX(4px);
+}
+
+/* Notification pulse */
+.notification-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: .8; }
+}
