@@ -10,6 +10,8 @@ import {
   Home as HomeIcon,
   Lock as LockIcon,
   Notifications as NotificationsIcon,
+  TravelExplore as TravelExploreIcon,
+  Chat as ChatIcon,
 } from "@mui/icons-material";
 import DrawerList from "../components/DrawerList";
 
@@ -17,44 +19,38 @@ const menu = [
   {
     name: "Overview",
     path: "/",
-    icon: <HomeIcon className="text-gray-400" />,
-    activeIcon: <HomeIcon className="text-white" />,
+    icon: <DashboardIcon className="text-gray-400" />,
+    activeIcon: <DashboardIcon className="text-white" />,
   },
   {
-    name: "Predictor",
-    path: "/predictor",
-    icon: <HomeIcon className="text-gray-400" />,
-    activeIcon: <HomeIcon className="text-white" />,
-  },
-  {
-    name: "Aboundance",
-    path: "/data-sources",
-    icon: <StorageIcon className="text-gray-400" />,
-    activeIcon: <StorageIcon className="text-white" />,
+    name: "Abundance",
+    path: "/abundance",
+    icon: <BarChartIcon className="text-gray-400" />,
+    activeIcon: <BarChartIcon className="text-white" />,
   },
   {
     name: "Diversity Analytics",
-    path: "/data-sources-2",
-    icon: <LockIcon className="text-gray-400" />,
-    activeIcon: <LockIcon className="text-white" />,
+    path: "/diversity",
+    icon: <ScienceIcon className="text-gray-400" />,
+    activeIcon: <ScienceIcon className="text-white" />,
   },
   {
     name: "Novel Taxa",
-    path: "/models",
+    path: "/novel-taxa",
     icon: <CodeIcon className="text-gray-400" />,
     activeIcon: <CodeIcon className="text-white" />,
   },
   {
     name: "Taxa Explorer",
-    path: "/experiments",
-    icon: <ScienceIcon className="text-gray-400" />,
-    activeIcon: <ScienceIcon className="text-white" />,
+    path: "/taxa-explorer",
+    icon: <TravelExploreIcon className="text-gray-400" />,
+    activeIcon: <TravelExploreIcon className="text-white" />,
   },
   {
     name: "Chat Bot",
-    path: "/results",
-    icon: <BarChartIcon className="text-gray-400" />,
-    activeIcon: <BarChartIcon className="text-white" />,
+    path: "/chatbot",
+    icon: <ChatIcon className="text-gray-400" />,
+    activeIcon: <ChatIcon className="text-white" />,
   },
 ];
 

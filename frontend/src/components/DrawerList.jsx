@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 
 const DrawerList = ({ menu, menu2, toggleDrawer }) => {
@@ -171,48 +171,13 @@ const DrawerList = ({ menu, menu2, toggleDrawer }) => {
       `}</style>
       
       {/* Entire Scrollable Content Container */}
-      <div className="relative z-10 full-scroll-container scroll-container pr-2">
+      <div className="relative z-10 full-scroll-container scroll-container pr-2 py-10">
         <div className="min-h-full flex flex-col">
-          {/* Enhanced Header Section */}
-          <div className="px-6 py-8">
-            {/* Logo and Brand with Floating Animation */}
-            <div className="flex items-center space-x-4 mb-8 floating-element">
-              <div className="relative">
-                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 flex items-center justify-center shadow-2xl shadow-cyan-500/30 neon-glow">
-                  <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                {/* Orbital rings around logo */}
-                <div className="absolute inset-0 rounded-2xl border border-cyan-400/30 animate-ping"></div>
-                <div className="absolute inset-0 rounded-2xl border border-blue-400/20 animate-pulse"></div>
-              </div>
-              <div>
-                <h1 className="text-white text-2xl font-bold bg-gradient-to-r from-white to-cyan-200 bg-clip-text text-transparent">
-                  E-dna
-                </h1>
-                <p className="text-cyan-300 text-xs uppercase tracking-widest font-semibold">AI/ML Platform</p>
-              </div>
-            </div>
-
-            {/* Enhanced CML Badge */}
-            <div className="glass-card rounded-2xl p-4 mb-6 floating-element" style={{animationDelay: '0.5s'}}>
-              <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-400 via-teal-500 to-cyan-500 flex items-center justify-center shadow-lg shadow-emerald-500/30">
-                  <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
-                  </svg>
-                </div>
-                <div>
-                  <span className="text-white text-sm font-semibold">Connected ML</span>
-                  <p className="text-emerald-300 text-xs">Status: Active</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          {/* Enhanced Header Section - NOTE: Logo section has been removed */}
+          
 
           {/* Enhanced Navigation Menu */}
-          <div className="px-4 mb-8">
+          <div className="px-4 mb-8 py-">
             <nav className="space-y-2">
               {menu.map((item, index) => {
                 const isActive = location.pathname === item.path;

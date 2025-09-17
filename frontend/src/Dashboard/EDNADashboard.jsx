@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import EDNADrawerList from './EDNADrawerList';
 import EDNARoutes from '../Routes/EDNARoutes';
+import Navbar from './Navbar';
 
 // Animated Particles Background Component
 const AnimatedBackground = () => {
@@ -140,6 +141,12 @@ const EDNADashboard = () => {
       {/* Animated Background */}
       <AnimatedBackground />
       
+      {/* Navbar */}
+      <div className='absolute top-0 left-0 right-0'>
+        <Navbar/>
+      </div>
+      <div className='py-10'></div>
+
       {/* Main Dashboard Content */}
       <div className="relative z-10 flex h-screen">
         {/* Sidebar */}
@@ -150,39 +157,7 @@ const EDNADashboard = () => {
         {/* Main Content */}
         <div className="flex-1 overflow-y-auto relative">
           {/* Header */}
-          <div className="bg-transparent backdrop-blur-sm border-b border-white/10 p-4 flex items-center justify-between">
-            {/* Mobile menu toggle */}
-            <button
-              onClick={toggleDrawer}
-              className="lg:hidden p-2 rounded-md text-white hover:bg-white/10"
-            >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
-              </svg>
-            </button>
-
-            {/* Logo */}
-            <div className="text-white text-xl font-bold">
-              E-dna <span className="text-sm text-gray-400">AI/ML</span>
-            </div>
-
-            {/* Search and Profile */}
-            <div className="flex items-center space-x-4">
-              <div className="relative">
-                <input
-                  type="text"
-                  placeholder="Search"
-                  className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400"
-                />
-                <svg className="absolute right-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
-              </div>
-              <div className="w-8 h-8 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 flex items-center justify-center">
-                <span className="text-white text-sm font-bold">U</span>
-              </div>
-            </div>
-          </div>
+          
           
           {/* Dashboard Content */}
           <div className="p-6 lg:p-8">
