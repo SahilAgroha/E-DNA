@@ -1,4 +1,4 @@
-package com.sahil.E_DNA.controller;
+package com.sahil.E_DNA.extra;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.sahil.E_DNA.service.FileAnalysisService;
