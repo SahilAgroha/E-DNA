@@ -15,6 +15,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
+
 @RequestMapping("/api/dashboard")
 public class DashboardController {
     @Autowired private FileAnalysisRepository fileAnalysisRepository;

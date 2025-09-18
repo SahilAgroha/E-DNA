@@ -21,4 +21,20 @@ public interface TaxonomicPredictionRepository extends JpaRepository<TaxonomicPr
     List<Object[]> findAbundanceByGenus(@Param("fileId") String fileId);
 
     Optional<TaxonomicPrediction> findBySequenceId(String sequenceId);
+
+    // Method to find predictions by Sample ID
+    List<TaxonomicPrediction> findBySampleId(String sampleId);
+
+
+    // Method to find predictions by Kingdom
+    List<TaxonomicPrediction> findByKingdom(String kingdom);
+
+    // Method to find predictions by Phylum
+    List<TaxonomicPrediction> findByPhylum(String phylum);
+
+    // Method to find predictions by Genus
+    List<TaxonomicPrediction> findByGenus(String genus);
+
+    // Method to find predictions by Species
+    List<TaxonomicPrediction> findBySpecies(String species);
 }
