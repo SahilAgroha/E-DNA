@@ -2,14 +2,16 @@ import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import { useDispatch, useSelector } from "react-redux";
 import { thunk } from "redux-thunk";
 import { TypedUseSelectorHook } from "react-redux";
-import ednaSlice from "./ednaSlice";
+
+import microbiomeReducer from './microbiomeSlice';
 
 const rootReducer=combineReducers({
-    edna: ednaSlice,
+    microbiome: microbiomeReducer,
 })
 
 const store=configureStore({
     reducer:rootReducer,
+    
     // middleware:(getDefaultMiddleware)=>getDefaultMiddleware().concat(thunk)
 })
 

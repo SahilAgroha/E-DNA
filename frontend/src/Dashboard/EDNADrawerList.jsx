@@ -12,6 +12,7 @@ import {
   Notifications as NotificationsIcon,
   TravelExplore as TravelExploreIcon,
   Chat as ChatIcon,
+  CloudUpload,
 } from "@mui/icons-material";
 import DrawerList from "../components/DrawerList";
 
@@ -21,6 +22,12 @@ const menu = [
     path: "/",
     icon: <DashboardIcon className="text-gray-400" />,
     activeIcon: <DashboardIcon className="text-white" />,
+  },
+  {
+    name: "Upload File",
+    path: "/upload",
+    icon: <CloudUpload className="text-gray-400" />,
+    activeIcon: <CloudUpload className="text-white" />,
   },
   {
     name: "Abundance",
@@ -55,12 +62,7 @@ const menu = [
 ];
 
 const menu2 = [
-  {
-    name: "Settings",
-    path: "/settings",
-    icon: <SettingsIcon className="text-gray-400" />,
-    activeIcon: <SettingsIcon className="text-white" />,
-  },
+  
 ];
 
 const EDNADrawerList = ({ toggleDrawer }) => {
