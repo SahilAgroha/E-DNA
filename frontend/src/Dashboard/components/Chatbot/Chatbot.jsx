@@ -4,9 +4,9 @@ import { fetchOverviewsAsync, fetchAnalysisAsync } from '../../../State/microbio
 import { Box, Typography, TextField, Button, IconButton, Select, MenuItem, FormControl, InputLabel, CircularProgress } from '@mui/material';
 import { Send, SmartToy } from '@mui/icons-material';
 import DashboardCard from '../TaxaExplorer/DashboardCard';
-import { API_KEY } from '../../../assets/Key';
+// import { API_KEY } from '../../../assets/Key';
 
-const API_KEY=API_KEY
+const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
 const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${API_KEY}`;
 // Define fadeIn animation for chat bubbles
 const fadeInUp = `
